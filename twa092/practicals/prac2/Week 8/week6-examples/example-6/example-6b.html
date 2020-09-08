@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+     <meta charset="utf-8">
+     <title>Example 6b</title>
+  </head>
+  <body>
+     <form id="eg6b" action="example-6.php" method="get">
+        <div class="form-element">Select the sports you like (at least 1):<br>
+        <!-- the change is to idicate that sport is an array by adding []
+             to the name of the input devices -->
+          <input type="checkbox" name="sport[]" id="cbox1" value="cricket"><label for="cbox1">Cricket</label><br>
+          <input type="checkbox" name="sport[]" id="cbox2" value="soccer"><label for="cbox2">Soccer</label><br>
+          <input type="checkbox" name="sport[]" id="cbox3" value="golf"><label for="cbox3">Golf</label><br>
+          <input type="checkbox" name="sport[]" id="cbox4" value="squash"><label for="cbox4">Squash</label><br>
+          <input type="checkbox" name="sport[]" id="cbox5" value="racing"><label for="cbox5">Horse Racing</label><br>
+          <input type="checkbox" name="sport[]" id="cbox6" value="tennis"><label for="cbox6">Tennis</label><br>
+        </div>
+        <div class="form-element">
+          <input type="submit" value="submit">
+        </div>
+     </form>
+  </body>
+</html>

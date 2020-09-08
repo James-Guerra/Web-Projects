@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+     <meta charset="UTF-8">
+     <title>JavaScript Example</title>
+     <script>
+       function updateTotal(){
+         document.getElementById("Order").total.value = "175.95";
+       }
+     </script>
+  </head>
+  <body>
+    <form action="https://twaaut.cdms.westernsydney.edu.au/twainfo/form.asp"
+            method="post" id="Order">
+      <p>
+        <label for="total">Total</label>
+        <input type="text" name="total" id="total">
+      </p>
+      <p>
+        <input type="button" value="Submit" onclick="updateTotal();">
+      </p>
+    </form>
+  </body>
+</html>

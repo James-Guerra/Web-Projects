@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+     <meta charset="UTF-8">
+     <title>First Form Example</title>
+  </head>
+  <body>
+    <form id="orderForm" method="post" action="http://somewhere.com/processOrder.php">
+      <p>Choose a USB size:<br>
+        <input type="radio" id="8gb" name="USBsize" value="8"><label for="8gb">8 GB</label><br>
+        <input type="radio" id="16gb" name="USBsize" value="16"><label for="16gb">16 GB</label><br>
+        <input type="radio" id="32gb" name="USBsize" value="32"><label for="32gb">32 GB</label><br>
+        Quantity: <input type="text" name="quantity"><br>
+        <input type="submit" value="Submit Order"></p>
+    </form>
+  </body>
+</html>

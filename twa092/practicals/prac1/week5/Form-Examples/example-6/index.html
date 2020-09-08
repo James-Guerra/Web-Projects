@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Example 6</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <form action="#" method="get" onsubmit="return validateForm(this);">
+      <div class="form-element">
+        <label for="fname">First Name</label>
+        <input type="text" name="fname" id="fname">
+        <span class="error-messages" id="fname-error">First Name is required</span>
+      </div>
+      <div class="form-element">
+        <label for="lname">Last Name</label>
+        <input type="text" name="lname" id="lname">
+        <span class="error-messages" id="lname-error">Last Name is required</span>
+      </div>
+      <div class="form-element">
+        <label id="pet-label">Pet Preference</label>
+        <input type="radio" name="pet" value="d" id="dogRadio"><label for="dogRadio">Dog</label>
+        <input type="radio" name="pet" value="c" id="catRadio"><label for="catRadio">Cat</label>
+    </div>
+    <div class="form-element">
+        <label id="sports-label">Favourite Sports</label>
+        <input type="checkbox" name="sports" id="soccerCheckbox" value="soccer"><label for="soccerCheckbox">Soccer</label>
+        <input type="checkbox" name="sports" id="footballCheckbox" value="football"><label for="footballCheckbox">Football</label>
+      </div>
+      <div class="form-element">
+        <input type="submit" name="submit-button" value="Submit">
+      </div>
+     </form>
+  </body>
+</html>

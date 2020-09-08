@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>changing text</title>
+  <link rel="stylesheet" href="styles.css" type="text/css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <form id="form" action="#" method="get">
+    <p>Enter a number 10 or less in each box</p>
+    <div class="form-element">
+      <label for="num1">Number 1</label>
+      <input type="text" name="tbox1" id="num1" size="10" onblur="ValidateNumber(this,document.getElementById('error1'));">
+      &nbsp;<span style="color:red;" id="error1"></span>
+    </div>
+    <div class="form-element">
+      <label for="num2">Number 2</label>
+      <input type="text" name="tbox2" id="num2" size="10" onblur="ValidateNumber(this,document.getElementById('error2'));">
+      &nbsp;<span style="color:red;" id="error2"></span>
+    </div>
+    <p>Enter your email address</p>
+    <div class="form-element">
+      <label for="email">Email</label>
+      <input type="text" name="tbox3" id="email" size="10" onblur="ValidateEmail(this,document.getElementById('error3'));">
+      &nbsp;<span style="color:red;" id="error3"></span>
+    </div>
+  </form>
+</body>
+</html>

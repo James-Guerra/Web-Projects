@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>function stuff</title>
+<script>
+function howManyChar (element){
+document.getElementById("nameLength").value=element.value.length;
+
+}
+</script>
+</head>
+
+<body>
+  <form>
+School Name: <input type="text" size="60" value="School of Computing and " onblur="howManyChar(this);"><br>
+Length: <input type="text" id="nameLength" ><br>
+  </form>
+
+
+</body>
+</html>

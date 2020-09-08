@@ -1,0 +1,143 @@
+@font-face {
+  font-family: 'Raleway', sans-serif;
+  src: url(https://fonts.googleapis.com/css?family=Raleway&display=swap);
+}
+/* parts a - g */
+body {
+  background-color: white;
+  font-family: 'Raleway', Verdana, Arial, sans-serif;
+  font-size: 100%;
+  color: black;
+  margin: 50px 75px;
+  border: 1px solid #172457;
+  border-radius: 15px;
+  padding: 25px 50px;
+}
+
+/* part h */
+h1 {
+  font-size: 220%;
+  color: #172457;
+  text-align: center;
+}
+
+/* part i */
+h2 {
+  font-size: 160%;
+  font-family: Georgia;
+  color: #7B85AD;
+  text-transform: capitalize;
+}
+
+/* part j */
+h3 {
+  font-size: 120%;
+  font-family: Georgia;
+  color: gray;
+}
+
+/* part k */
+p, ol, ul {
+  line-height: 1.5;
+}
+
+/* part l */
+p {
+  text-align: justify;
+}
+
+/* part m */
+ol {
+  padding: 0px 15px;
+}
+
+/* part n */
+figure > img, figcaption {
+  display: block;
+  width: 744px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* part o */
+#submarine {
+  float: right;
+  width: 250px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  margin-right: 0px;
+  margin-top: 0px;
+}
+
+/* part p */
+figcaption {
+  text-align: justify;
+  font-size: 70%;
+  font-style: italic;
+  padding-bottom: 15px;
+  border-bottom: 1px solid black;
+}
+
+/*part q is in-line css in "exercise-4.html"*/
+
+/* part r */
+nav {
+  background-color: #172457;
+  font-size: 120%;
+  border-radius: 5px;
+}
+
+/* part s */
+nav > a:hover {
+  background-color: #7B85AD;
+}
+
+/* part t */
+nav > a:link {
+  padding: 14px 16px;
+  color: white;
+  display: inline-block;
+}
+
+/* part u */
+footer > a:link {
+  color: black;
+  font-style: italic;
+}
+
+footer > a:visited {
+  color: #7B85AD;
+}
+
+/* part v */
+header {
+  border-bottom: 2px solid black;
+}
+
+/* part w */
+/*Displays info at top of the page*/
+#info {
+  text-align: right;
+  padding-bottom: 10px;
+  font-style: italic;
+  font-size: 70%;
+  color: #7B85AD;
+}
+
+/* part x */
+footer > p {
+  color: white;
+  font-size: 70%;
+  background-color: #7B85AD;
+  padding: 2px 0px 2px 20px;
+  border: hidden;
+  border-radius: 5px;
+}
+
+/* part y */
+#box1 {
+  border: 1px dashed #172457;
+  padding: 0px 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,31 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+label {
+    display:inline-block;
+    width:150px;
+}
+
+input[type="radio"] + label, input[type="checkbox"] + label {
+    width:60px;
+}
+
+input[type="text"] {
+    width:150px;
+    padding:3px;
+}
+
+.form-element {
+    padding:10px;
+}
+
+#form-error {
+    padding:3px;
+    border: 1px solid #51061f;
+    color:#51061f;
+    background-color: #f7e8ed;
+    border-radius: 3px;
+    display:none;
+}

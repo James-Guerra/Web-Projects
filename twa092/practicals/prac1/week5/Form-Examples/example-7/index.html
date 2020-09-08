@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Example 7</title>
+    <script src="script.js" defer></script>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <form id="testForm" onsubmit="return validateForm(this);" novalidate >
+      <div class="form-element">
+        <label for="first">First Input</label>
+        <input type="text" required name="first" id="first" value="">
+      </div>
+      <div class="form-element">
+        <label for="second">Second Input</label>
+        <input type="text" name="second" id="second" value="">
+      </div>
+      <div class="form-element">
+        <label for="third">Third Input</label>
+        <input type="text" required name="third" id="third" value="Filled In">
+      </div>
+      <div class="form-element radios">
+        <input type="radio" name="radios" required value="fourth" id="fourth">
+        <label for="fourth">Radio 1</label>
+        <input type="radio" name="radios" value="fifth" id="fifth">
+        <label for="fifth">Radio 2</label>
+        <input type="radio" name="radios" value="sixth" id="sixth">
+        <label for="sixth">Radio 3</label>
+      </div>
+      <div class="form-element">
+        <input type="submit" value="Check Form Inputs">
+      </div>
+    </form>
+  </body>
+</html>

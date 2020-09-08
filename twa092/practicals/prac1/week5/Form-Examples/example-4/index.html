@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Example 4</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <form action="#" method="get">
+      <div class="form-element">
+        <label for="pizzas">Choose your pizzas </label>
+        <select name="pizzas" multiple id="pizzas" size="3" onchange="updatePrice(this);">
+          <option value="5.95">Ham &amp; Pineapple</option>
+          <option value="12.95">Meat Lovers</option>
+          <option value="9.95">Chicken Supreme</option>
+        </select>
+         - $ <input type="text" name="price" placeholder="0.00" readonly id="price">
+      </div>
+      <div class="form-element">
+        <input type="button" name="total" value="Total">
+      </div>
+     </form>
+  </body>
+</html>

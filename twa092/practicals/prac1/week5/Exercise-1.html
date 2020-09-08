@@ -1,0 +1,198 @@
+<!--
+  Student ID: 19045229
+  Name: James Guerra
+  Campus: Campbelltown
+  Prac time: Thursday 10am -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Forms Exercise 1</title>
+    <link rel="stylesheet" type="text/css" href="NewPatient.css">
+    <script src="/Users/student/Desktop/UNI/twa092/practicals/prac1/week5/formValidation.js"></script>
+  </head>
+  <body>
+
+    <div id="required-onsubmit">
+      All required fields are highlighted in red
+    </div>
+    <div id="form-required-intro">
+      <span class="form-required">*</span> required fields
+    </div>
+
+    <form id="form" action="http://tl28serv.westernsydney.edu.au/twainfo/form.asp" method="post" onsubmit="return validateForm(this);" novalidate>
+      <fieldset>
+        <h3>Personal Details:</h3>
+        <div>
+          <label for="title">Title:<span class="form-required">*</span></label>
+          <select id="title" name="title" required form="form" onchange="displayOther()">
+            <option value="" selected="selected" hidden>Title</option>
+            <option value="mr">Mr</option>
+            <option value="mrs">Mrs</option>
+            <option value="ms">Ms</option>
+            <option value="miss">Miss</option>
+            <option value="master">Master</option>
+            <option value="dr">Dr</option>
+            <option value="other">Other</option>
+          </select>
+          <input type="text" id="other" name="other" placeholder="Other">
+          <span class="required">Required Field</span>
+        </div>
+
+        <div class="text-input-layout">
+          <label for="dateOfBirth">Date of Birth (dd/mm/yyyy):<span class="form-required">*</span></label>
+          <input type="text" id="dateOfBirth" required name="dateOfBirth" placeholder="i.e. 05/12/2003" onchange="validateDate(this)" value="" onblur="requiredField(this, 1)">
+          <span class="required">Required Field</span>
+        </div>
+
+        <div>
+          <span class="text-input-layout">
+            <label for="fname">First Name:<span class="form-required">*</span></label>
+            <input type="text" id="fname" required name="fname" onchange="nameValidate(this)" value="" onblur="requiredField(this, 2)">
+            <span class="required">Required Field</span>
+          </span>
+
+          <span class="text-input-layout">
+            <label for="lname">Last Name:<span class="form-required">*</span></label>
+            <input type="text" id="lname" required name="lname" onchange="nameValidate(this)" value="" onblur="requiredField(this, 3)">
+            <span class="required">Required Field</span>
+          </span>
+        </div>
+
+        <div>
+          <label for="address">Postal Address:</label>
+          <input type="text" id="address" name="address" size="100" onchange="validateAddress(this)">
+        </div>
+
+        <span class="text-input-layout">
+          <label for="suburb">Suburb:</label>
+          <input type="text" id="suburb" name="suburb" onchange="validateSuburb(this)">
+        </span>
+
+        <span class="text-input-layout">
+          <label for="postcode">Postcode:</label>
+          <input type="text" id="postcode" name="postcode" onchange="validatePostcode(this)">
+        </span>
+
+        <span>
+          <span class="alert">
+            Invalid Date:
+             <span class="newline"> - Must be in the form dd/mm/yyyy</span>
+          </span>
+          <span class="alert">
+            Invalid First/Last name:
+            <span class="newline"> - Must only contain letters</span>
+          </span>
+          <span class="alert">
+            Invalid Address:
+            <span class="newline"> - Must not contain special characters</span>
+          </span>
+          <span class="alert">
+            Invalid Suburb:
+            <span class="newline"> - Must only contain letters</span>
+          </span>
+          <span class="alert">
+            Invalid Postcode:
+            <span class="newline"> - Numbers only</span>
+            <span class="newline"> - Maximum of 4 digits</span>
+          </span>
+        </span>
+      </fieldset>
+
+      <fieldset onchange="removeRedBorder()" >
+        <h3>Contact Details:</h3>
+
+        <span class="text-input-layout">
+          <label for="dt-phone">Daytime Phone:</label>
+          <input type="text" id="dt-phone" name="dt-phone" required onchange="validatePhone(this)">
+        </span>
+
+        <span class="text-input-layout">
+          <label for="mobile">Mobile:</label>
+          <input type="text" id="mobile" name="mobile" required onchange="validateMobile(this)">
+        </span>
+
+        <span class="text-input-layout">
+          <label for="work">Work:</label>
+          <input type="text" id="work" name="work" required onchange="validatePhone(this)">
+        </span>
+
+        <span class="text-input-layout">
+          <label for="email">Email Address:</label>
+          <input type="text" id="email" name="email" onchange="validateEmail(this)">
+        </span>
+
+        <span>
+          <span id="alert-contact-details">Require AT LEAST one phone number</span>
+          <span class="alert">
+            Invalid Phone Number:
+            <span class="newline"> - Must contain 8 to 10 digits</span>
+          </span>
+          <span class="alert">Must start with "04"</span>
+          <span class="alert">Must contain 10 numbers</span>
+          <span class="alert">Must only contain 10 numbers</span>
+          <span class="alert">
+            Invalid email address:
+            <span class="newline"> - i.e. johnsmith@example.com</span>
+          </span>
+        </span>
+
+      </fieldset>
+
+      <fieldset>
+        <h3>Emergency Contact Details:</h3>
+        <span class="text-input-layout">
+          <label for="emerg-contact">Emergency Contact Person:</label>
+          <input type="text" id="emerg-contact" name="emerg-contact">
+        </span>
+
+        <span class="text-input-layout">
+          <label for="relationship">Relationship:</label>
+          <input type="text" id="relationship" name="relationship">
+        </span>
+
+        <span class="text-input-layout">
+          <label for="emerg-mobile">Mobile:</label>
+          <input type="text" id="emerg-mobile" name="emerg-mobile">
+        </span>
+
+        <span class="text-input-layout">
+          <label for="emerg-dt-phone">Daytime Phone:</label>
+          <input type="text" id="emerg-dt-phone" name="emerg-dt-phone">
+        </span>
+      </fieldset>
+
+      <fieldset>
+        <h3>Next of Kin Details:</h3>
+        <div id="duplicate">
+          <label for="checkbox-copy-details">As Above</label>
+          <input type="checkbox" id="checkbox-copy-details" name="checkbox-copy-details" onclick="copyDetails()">
+        </div>
+
+        <span class="text-input-layout">
+          <label for="kin-name">Next of kin:</label>
+          <input type="text" id="kin-name" name="kin-name">
+        </span>
+
+        <span class="text-input-layout">
+          <label for="kin-relationship">Relationship to Patient:</label>
+          <input type="text" id="kin-relationship" name="kin-relationship">
+        </span>
+
+        <span class="text-input-layout">
+          <label for="kin-mobile">Mobile Number:</label>
+          <input type="text" id="kin-mobile" name="kin-mobile">
+        </span>
+
+        <span class="text-input-layout">
+          <label for="kin-dt-phone">Daytime Phone:</label>
+          <input type="text" id="kin-dt-phone" name="kin-dt-phone">
+        </span>
+      </fieldset>
+
+      <div>
+        <input type="submit" id="submit">
+      </div>
+    </form>
+  </body>
+</html>

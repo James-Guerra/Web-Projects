@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Regular Expression</title>
+    <script>
+
+      function testRegExp () {
+        var formString = document.getElementById("formInput").value;
+        var regExpression = /^[0-9]{4}$/;
+        if (regExpression.test(formString)) {
+          alert("Correct: There are 4 numbers in this box.");
+        }
+        else {
+          alert("Error: There are letters in this box, or not 4 numbers");
+        }
+      }
+    </script>
+
+  </head>
+  <body>
+	  <form>
+      <p>Enter a 4 digit number: <input type="text" id="formInput"> </p>
+		  <p> <input type="button" value="Validate" onclick="testRegExp()">    </p>
+		  <p>This example shows only a simple regular expression pattern which will exclude anything but numerals. Modify the pattern if you need anything more complex.</p>
+    </form>
+  </body>
+</html>

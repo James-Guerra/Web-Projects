@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Two dimensional array</title>
+</head>
+<body>
+  <script>
+
+    var matrix = new Array();
+    matrix[0] = new Array(10, 10, 10, 10);
+    matrix[1] = new Array(20, 20, 20, 10);
+    matrix[2] = new Array(10, 10, 10, 20);
+    var i, j;
+    document.write("<p><strong>Matrix</strong></p><p>");
+    for (i=0; i < matrix.length; i++) {
+      for(j=0; j < matrix[i].length; j++)
+        document.write(matrix[i][j] + " ");
+      document.write("<br>");
+    }
+    document.write("</p>");
+  </script>
+
+</body>
+</html>

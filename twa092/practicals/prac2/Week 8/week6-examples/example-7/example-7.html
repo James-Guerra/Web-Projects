@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+     <meta charset="utf-8">
+     <link rel="stylesheet" href="styles.css" type="text/css">
+     <title>Example 7</title>
+  </head>
+  <body>
+     <form id="pizzaform" action="order7.php" method="post">
+        <div class="form-element"><label for="pan">Select the pizzas you want:</label><br>
+           <select name="pizza[]" size="3" multiple id="pan">
+              <option value="11.50">Supreme</option>
+              <option value="13.50">Super Supreme</option>
+              <option value="10.50">Meat Lovers</option>
+              <option value="10.50">Vegie</option>
+              <option value="12.50">Chicken</option>
+           </select>
+        </div>
+        <div class="form-element">
+          <input type="submit" name="submit-button" value="Submit">
+        </div>
+     </form>
+  </body>
+</html>

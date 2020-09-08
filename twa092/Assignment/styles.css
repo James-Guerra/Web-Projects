@@ -1,0 +1,927 @@
+/*
+Authorship:
+Name: James Guerra
+Student ID: 19045229
+Prac Time: Thursday 10am
+*/
+
+/* all svg files were created using svg-edit from
+https://svg-edit.github.io/svgedit/editor/svg-editor.html */
+
+/* All image centering techniques were sourced from
+https://www.youtube.com/watch?v=JenSL-4cJvE */
+
+* {
+  font-family: 'Quicksand', sans-serif;
+}
+html {
+  position: relative;
+  height: 100%;
+}
+
+body {
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    padding:0;
+    font-family: Arial;
+    font-size:108%;
+    background-color:#ffffff;
+    color:#000000;
+    position: relative;
+    height: 100%;
+}
+
+
+table {
+    border-collapse: collapse;
+    margin:10px;
+    width: 100%;
+    clear: both;
+}
+
+a {
+  color: white;
+}
+table, th, td {
+    border: black solid 1px;
+    padding: 5px;
+    text-align: center;
+}
+
+td > img {
+  border-radius: 10px;
+}
+thead {
+  background-color: #7DB54A;
+}
+
+
+td > a:hover {
+  cursor: pointer;
+}
+
+td > a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+td > a {
+  text-decoration: none;
+  color: inherit;
+}
+
+iframe {
+  border-radius: 10px;
+}
+
+/* Navigation Related */
+header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 100%;
+  z-index: 2;
+}
+
+nav {
+  box-shadow: 1px 4px 7px black;
+  background-image: linear-gradient(#FF7F00, #C1670D);
+  color: white;
+  padding: 14px 0px 14px 14px;
+  font-size: 19px;
+  text-align: right;
+}
+
+.logo > img {
+  position: relative;
+  float: left;
+  z-index: 1;
+}
+
+.navigation-container > span {
+  position: relative;
+  top: -35px;
+}
+
+span.navigation-link > a {
+  padding: 14px;
+  margin: 0px;
+  text-decoration: none;
+}
+
+.drop-down {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  position: absolute;
+  right: 81px;
+  top: 52px;
+  opacity: 0%;
+  visibility: hidden;
+  background-image: linear-gradient(#D5710D, #D5710D);
+  width: 63px;
+  transition: opacity 0.3s, visibility 0.2s;
+}
+
+a.drop-down:hover{
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+#drop-down-trigger:hover + a{
+  box-shadow: 1px 9px 10px black;
+  border: 0.5px solid black;
+  border-top: none;
+  opacity: 100%;
+  visibility: visible;
+}
+
+a.drop-down:hover {
+  box-shadow: 1px 9px 10px black;
+  border: 0.5px solid black;
+  border-top: none;
+  visibility: visible;
+  opacity: 100%;
+}
+
+span.navigation-link > a:visited {
+  color: inherit;
+}
+
+span.navigation-link > a:hover {
+  cursor: pointer;
+  background-image: linear-gradient(#FFAF5F, #FAA249);
+}
+
+.profile-container {
+  width: 40%;
+  height: 50px;
+  position: absolute;
+  display: inline;
+  right: 40%;
+  top: 0px;
+  padding-bottom: 5px;
+}
+
+.profile-text {
+  color: white;
+  font-size: 100%;
+  text-align: center;
+  margin-top: 14px;
+}
+/* Navigation Related */
+
+
+main {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 62px;
+  margin-bottom: 10px;
+  padding: 2.5% 5%;
+  min-height: 100%;
+  background-image: linear-gradient(#ff7f00, #FFC57C);
+  text-align: center;
+  box-shadow: 5px 10px 23px #000;
+  position: relative;
+  z-index: 0;
+  width: 80%;
+}
+input[type="text"], input[type="password"] {
+  font-size: 18px;
+  outline: none;
+}
+
+/* the following code segment was modified from
+https://stackoverflow.com/questions/2781549/removing-input-background-colour-for-chrome-autocomplete */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px #ff7f00 inset !important;
+}
+/* end of code segment from
+https://stackoverflow.com/questions/2781549/removing-input-background-colour-for-chrome-autocomplete */
+
+/* Search Page Related */
+#search-input {
+  background-color: inherit;
+  color: black;
+  border: none;
+  min-width: 80%;
+  height: 92%;
+}
+
+#submit-search {
+  float: right;
+  position: relative;
+  top: 10px;
+  right: 10px;
+}
+
+::placeholder {
+    color: #383838;
+}
+
+#inner-search-bar-container {
+  padding-left: 20px;
+  padding-right: 10px;
+  border-style: solid;
+  border: 2px solid #383838;
+  max-width: 100%;
+  height: 39px;
+  border-radius: 20px;
+  text-align: left;
+}
+
+
+#search-bar-container {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 80%;
+  height: 39px;
+}
+
+#error-message {
+  display: none;
+  color: white;
+  padding: 10px;
+  background-color: #FF7878;
+  color: #FE1212;
+  border: 2px solid #FE1212;
+}
+
+.empty-box-icon-container {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 50%;
+}
+
+.empty-box-icon {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.empty-box-icon-text {
+  display: block;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#empty-box-icon-text h1 {
+  text-decoration: none;
+}
+/* end search page related */
+
+/* Play page related */
+.heading-container {
+  width: 80%;
+  height:300px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  color: #E5E5E5;
+}
+
+.heading-container img {
+  float: left;
+  width: 160px;
+  height: 160px;
+  border-radius: 10px;
+  position: relative;
+  top: 50%;
+  left: 7%;
+  margin: 30px;
+  transform: translate(-7%, -63%);
+}
+
+.heading-above {
+  text-decoration: none;
+  position: relative;
+  top: 8%;
+  padding-left: 0px;
+  left: -5%;
+  float: right;
+  text-align: left;
+  width: 50%;
+  padding-right: 15%;
+  border-bottom: 3px solid #E5E5E5;
+  filter: drop-shadow(2px 4px 6px black);
+  font-size: 60px;
+}
+
+.heading-below {
+  text-decoration: none;
+  position: relative;
+  top: -8%;
+  padding-right: 0px;
+  left: -5%;
+  float: right;
+  text-align: right;
+  width: 50%;
+  filter: drop-shadow(2px 4px 6px black);
+  font-size: 60px;
+  margin-top: 0px;
+}
+
+#heading-1 {
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  padding-right: 10%;
+  padding-left: 10%;
+  top: 10px;
+  border-right: 2px solid black;
+}
+
+#heading-2 {
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  left: 10;
+  padding-left: 10%;
+  top: 10px;
+}
+
+.thumbnail-container img {
+  float: left;
+  border: 2px solid black;
+  height: 100%;
+  border-radius: 10px;
+  padding: 3px;
+}
+
+table.selection-table {
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  border-radius: 10px;
+  border-collapse:separate;
+  border-spacing: 0px 0px;
+  padding: 20px 30px;
+}
+
+
+.selection-table tr:nth-child(n+2):hover {
+  background-color: #FFECB5;
+}
+
+.selection-table th {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid black;
+  transition: border-bottom 2s;
+}
+
+
+.selection-table th:nth-child(1) {
+    text-align:left;
+}
+
+.selection-table td:nth-child(1){
+  border: none;
+  text-align: left;
+}
+
+.selection-table a:hover{
+  font-size: 105%;
+}
+
+.selection-table td:nth-child(n+2) {
+  border: none;
+  text-align: center;
+}
+
+.selection-table a {
+  display: block;
+  width: 100%;
+}
+
+tr.selection-table:hover td:nth-child(1) {
+  border-left: 10px solid #A55F00;
+}
+
+tr.selection-table:hover td:nth-child(1) {
+padding-left: 30px;
+}
+
+tr.selection-table:hover td:last-child {
+padding-left: 15px;
+}
+
+.selection-table td {
+  transition: all 0.4s;
+}
+/* end Play page related*/
+
+/* Playlist page  */
+#new-playlist {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+  text-align: center;
+  padding: 10px;
+  border-bottom: 0px;
+  width: 300px;
+  font-size: 115%
+}
+
+td[id="new-playlist"]::before {
+  content: url(images/arrow-right.svg);
+  padding-right: 7px;
+}
+
+td[id="new-playlist"]:hover::before {
+  animation: bounce1 ease-in-out 0.9s infinite;
+}
+
+td[id="new-playlist"]::after {
+  content: url(images/arrow-left.svg);
+  padding-left: 7px;
+}
+
+td[id="new-playlist"]:hover::after {
+  animation: bounce2 ease-in-out 0.9s infinite;
+}
+
+@keyframes bounce1 {
+  0% {padding-right: 7px;}
+  50% {padding-right: 14px;}
+  100% {padding-right: 7px;}
+}
+
+@keyframes bounce2 {
+  0% {padding-left: 7px;}
+  50% {padding-left: 14px}
+  100% {padding-left: 7px;}
+}
+
+#new-playlist:hover {
+  cursor: pointer;
+  font-size: 121%;
+}
+
+#add-song {
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+  position: relative;
+  width: 10%;
+  padding-top: 2%;
+  background-color: #FF6B6B;
+  text-align: center;
+}
+
+#add-song:hover {
+  background-color: #FF9F9F;
+}
+
+#playlist-form-container {
+  margin: auto;
+  width: 40%;
+  height: 120px;
+  border: 2px solid black;
+  position: fixed;
+  z-index: 10;
+  border-radius: 10px;
+  box-shadow: 5px 10px 8px black;
+  display: none;
+  background-color: white;
+  opacity: 100%;
+  text-align: center;
+  top: 20%;
+  left: 30%;
+}
+
+
+#playlist-selection-pop-up {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 15px;
+  width: 30%;
+  height: 500px;
+  border: 2px solid black;
+  position: absolute;
+  z-index: 10;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 5px 10px 8px black;
+  display: none;
+  opacity: 100%;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  overflow: scroll;
+}
+
+@keyframes fadeOut {
+  0% {opacity: 100%;}
+  100% {opacity: 0%; visibility: hidden;}
+}
+
+#successful-submission-pop-up {
+  margin: auto;
+  width: 40%;
+  height: 120px;
+  border: 2px solid black;
+  position: fixed;
+  z-index: 10;
+  border-radius: 10px;
+  box-shadow: 5px 10px 8px black;
+  display: block;
+  background-image: linear-gradient(#04A000, #52B74F);
+  opacity: 100%;
+  text-align: center;
+  top: 20%;
+  left: 30%;
+}
+
+#successful-submission-pop-up img {
+  float: left;
+  top: 50%;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  transform: translateY(-50%);
+  position: relative;
+  padding-left: 20px;
+  display: block;
+  padding=right: 30px;
+}
+
+#successful-submission-pop-up p {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 160%;
+  color: white;
+  text-align: center;
+  width: 70%;
+  font-weight: 900;
+  display: inline-block;
+}
+
+
+form.playlist-form input[type="text"]{
+  margin-right: auto;
+  margin-left: auto;
+  width: 80%;
+  height: 23px;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 3px;
+  position: absolute;
+  top: 78px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+form.playlist-form label {
+  text-align: left;
+  position: absolute;
+  top: 58px;
+  bottom: 0px;
+  left: 50px;
+  right: 0px;
+}
+form.playlist-form span {
+  color: red;
+  position: absolute;
+  top: 10px;
+  bottom: 0px;
+  left: 68px;
+  right: 0px;
+  max-width: 70%;
+}
+.close-button {
+  position: absolute;
+  top: 6px;
+  bottom: 0px;
+  left: 92%;
+  right: 0px;
+  margin: 0px;
+  padding: 5px;
+  width: 20px;
+  height: 20px;
+}
+
+.close-button:hover {
+  cursor: pointer;
+  color: #FABB7B;
+}
+
+/* The following code was modified from
+https://stackoverflow.com/questions/2852276/make-div-overlay-entire-page-not-just-viewport */
+.maintain-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  opacity: 50%;
+  background-color: #000;
+  visibility: hidden;
+  z-index: 2;
+}
+
+@keyframes opac {
+  from {
+    opacity: 100%;
+    background: none;
+  }
+
+  to {
+    visibility: visible;
+    opacity: 50%;
+    background-color: #000;
+  }
+}
+
+#login-container {
+  position: fixed;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 27%;
+  height: 400px;
+  box-shadow: 5px 10px 8px #484848;
+  border-radius: 10px;
+  padding: 15px;
+  border: 2px solid black;
+  background-image: linear-gradient(#ff7f00, #FFC57C);
+}
+
+#username {
+  display: inline-block;
+  border: 2px solid black;
+  width: 80%;
+  height: 20px;
+  margin-bottom: 75px;
+  padding: 5px;
+  position: relative;
+}
+
+#password {
+  display: inline-block;
+  border: 2px solid black;
+  width: 80%;
+  height: 20px;
+  padding: 5px;
+}
+
+.login-error-message {
+  color: red;
+  display: inline;
+}
+
+#login-submit {
+  display: block;
+  position: relative;
+  margin-top: 25px;
+  margin-right:auto;
+  margin-left: auto;
+  padding: 10px 20px;
+}
+
+input[type="submit"] {
+  background-color: white;
+  border: none;
+  color: black;
+  font-size: 15px;
+  text-decoration: none;
+  border: 2px solid black;
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+}
+#username-label {
+  margin-top: 80px;
+  display: block;
+  position: relative;
+  left: -100px;
+  padding-bottom: 6px;
+}
+
+#password-label {
+  padding-bottom: 6px;
+  display: block;
+  position: relative;
+  left: -100px;
+}
+
+
+table.song-table {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  border: 2px solid black;
+  border-radius: 10px;
+  border-collapse:separate;
+  border-spacing: 20px;
+}
+
+.song-table th {
+  border: none;
+  padding-bottom: 15px;
+  border-bottom: 2px solid black;
+}
+
+.song-table td{
+  border: none;
+}
+
+.song-table td:hover {
+  background: none
+}
+
+.song-table a:hover {
+  font-size: 108%;
+}
+
+#playlist-selection-pop-up {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 15px;
+  width: 30%;
+  height: 500px;
+  border: 2px solid black;
+  position: fixed;
+  z-index: 10;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 5px 10px 8px black;
+  display: block;
+  opacity: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#playlist-selection-pop-up form {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* forces label and input type to be treated as one block */
+#group-input {
+  padding-bottom: 18px;
+  display: block;
+}
+
+#divide-submit-and-radio { /* separates the submit button and names of playlists */
+  height: 430px;
+  overflow: scroll;
+}
+
+#divide-submit-and-radio::-webkit-scrollbar {
+display: none;
+}
+
+#playlist-selection-pop-up input[type="submit"] {
+  margin-right: auto;
+  margin-left: auto;
+  position: sticky;
+  top: 450px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  right: 0px;
+  bottom: 0px;
+  padding: 10px 5px;
+  width: 80px;
+  height: 45px;
+  text-align: center;
+}
+
+#playlist-selection-pop-up p {
+  font-size: 18px;
+}
+
+#playlist-selection-pop-up label:hover, input[type="radio"]{
+  font-size: 108%;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#playlist-selection-pop-up label, input[type="radio"]{
+  position: relative;
+  left: 10px;
+}
+
+#playlist-selection-pop-up input[type="radio"] {
+  visibility: hidden;
+}
+
+#playlist-selection-pop-up input[type="radio"]:checked::after {
+  float: right;
+  visibility: visible;
+  content:'\2713';
+}
+
+#playlist-redirection-message {
+  margin: auto;
+  width: 380px;
+  height: 180px;
+  border: 2px solid black;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  border-radius: 10px;
+  box-shadow: 5px 10px 8px black;
+  display: none;
+  background-image: linear-gradient(#FF6969, #C40000);
+  opacity: 100%;
+  color: white;
+  text-align: center;
+}
+
+#playlist-redirection-message div.message {
+  font-weight: bold;
+  font-size: 180%;
+  margin: 50px 20px 20px 20px;
+  text-decoration: none;
+}
+
+#direct-to-login {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  padding: 5px;
+  text-decoration: none;
+}
+
+#direct-to-login:hover {
+  color: #FABB7B;
+}
+
+#direct-to-login::after {
+  content: url(images/redirect-icon.svg);
+  padding-left: 3px;
+  float: right;
+}
+
+#direct-to-login:hover::after {
+  content: url(images/redirect-icon-hover.svg);
+  padding-left: 3px;
+  float: right;
+}
+
+.scroll-to-top {
+  width: 60px;
+  height: 35px;
+  background-color: #DF4722;
+  z-index: 2;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 3px 6px 18px black;
+  font-weight: bold;
+  padding: 3px 5px;
+  border-radius: 5px;
+  display: none;
+}
+
+.scroll-to-top p {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0px;
+  padding: 0px;
+}
+
+.scroll-to-top:hover {
+  cursor: pointer;
+  background-color: #FF7655;
+}
+
+.playlist-heading {
+  text-align: left;
+  position: relative;
+  margin: 0px 0px 0px 100px;
+  padding: 0px;
+}
+
+#submit-choice {
+  cursor: default;
+  border: 2px solid gray;
+  color: gray;
+}

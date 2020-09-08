@@ -1,0 +1,49 @@
+<!-- The content for this document was sourced from https://www.science.org.au/learning/general-audience/science-climate-change/7-what-are-impacts-of-climate-change on 2/03/2020 and is used for educational purposes only.
+-->
+
+Future climate change | Australian Academy of Science
+
+TWA Week 2 Practical Exercises
+my student ID
+Exercise 4 Exercise 6
+
+What are the impacts of climate change?
+
+Current changes are expected to continue and intensify in the future
+
+The impacts of future climate change and related sea-level rise will be experienced in many areas, from the natural environment to food security and from human health to infrastructure.
+
+Ecosystems:
+Among Australia’s terrestrial ecosystems, some of the most vulnerable to climate change are
+alpine systems as habitats shift to higher elevations and shrink in area;
+tropical and subtropical rainforests due to warming temperatures (moderated or intensified by rainfall changes);
+coastal wetlands affected by sea-level rise and saline intrusion;
+inland ecosystems dependent on freshwater and groundwater that are affected by changed rainfall patterns; and
+tropical savannahs affected by changes in the frequency and severity of bushfires.
+
+Climate warming causes land and ocean life to migrate away from areas that have become too warm, and towards areas that previously were too cool. In many places, climate change is likely to lead to invasion by new species and extinctions of some existing species that will have nowhere to migrate, for example because they are located on mountain tops (Figure 1). Seemingly small changes, such as the loss of a key pollinating species, may potentially have large impacts.
+
+week2-figure1.jpg
+alternate text: Decreasing Wet Tropics species in northern Queensland
+Figure 1: As temperatures become warmer, native animals that depend on cooler mountain habitats may be particularly vulnerable, as shown for this example from northern Queensland. The maps indicate the number of considered species now present in the Wet Tropics bioregion under the current climate and those expected with temperature rises of 1C, 3.5C and 5C shown according to the colour code at the left. The impacts of changes in rainfall are not included in this example. Adapted from Williams et al. (2003).
+
+Carbon dioxide affects ecosystems directly, both positively and negatively. On land it enhances growth in some trees and plants, an effect sometimes called ‘CO2 fertilisation’. Absorption of CO2 into the oceans causes ‘ocean acidification’, impeding shell formation by organisms such as corals and causing coral deterioration or death.
+
+Bushfires:
+The number of extreme fire risk days has grown over the past four decades, particularly in southeast Australia and away from the coast (Figure 2). Future hotter and drier conditions, especially in southern Australia, are likely to cause further increases in the number of high fire-risk days and in the length of the fire season. CO2 fertilisation may lead to increased foliage cover and hence increased fuel loads in warm arid environments such as parts of southern Australia. A study of southeast Australia has projected that the number of fire danger days rated at ‘very high’ and above could double by 2050, under high emission climate scenarios. Whether or not this leads to more, or worse, fires, and hence to changes in ecosystems, agriculture and human settlements, will depend on how this risk is managed.
+
+week2-figure2.jpg
+alternate text: surface meteorological observing station
+Figure 2: In most parts of Australia, the number of extreme fire weather days has increased over the last few decades. The map above shows the trends in average fire weather days (annual cumulative values of the McArthur Forest Fire Danger Index (FFDI)) at 38 climate reference sites. Trends are given in FFDI points per decade and larger circles represent larger trends according to the size code shown below. Filled circles represent trends that are statistically significant. The time series, top, shows the trend in the annual cumulative FFDI at Melbourne Airport. Adapted from Clarke et al (2013).
+
+Food security:
+In a non-drought year, around three-quarters of Australian crop and livestock production is exported. The range of adaptation strategies for primary producers to meet the challenge of climate change is large, including breed and seed selection, water conservation and changes in the timing of farm operations. Over the next few decades, some Australian agriculture may benefit from warmer conditions and from the fertilisation effect of increased CO2 in the atmosphere. Looking further into the future, much depends on the effects of climate change on rainfall regimes in Australia’s farming regions. If rainfall increases, climate change may continue to be beneficial for some agriculture. However, for drier, hotter, higher variability climate change scenarios, there are limits to adaptation with anticipated declines in crop yield and livestock production.
+
+Health:
+Heatwaves are among the highest-impact climate events in terms of human health in Australia. In very hot conditions, people can suffer from heat stress, especially vulnerable individuals such as the sick and elderly. During the heatwave of early 2009 in Victoria, there were 374 more deaths than average for the time of year. Warmer temperatures in future will lead to increased occurrences of heatwaves. Without further adaptation, extremely hot episodes are expected to have the greatest impact on mortality in the hotter north, while in cooler southern Australia there is likely to be an offsetting reduction in the number of cold-season deaths.
+
+Warmer temperatures may lead to an increase in diseases spread via water and food such as gastroenteritis. Over the next few decades, Australia is expected to remain malaria-free. However, other vector-borne diseases such as dengue fever, Barmah Forest Virus and Ross River Virus may expand their range, depending on socioeconomic and lifestyle factors related to hygiene, travel frequency and destinations, in addition to climate scenarios. Extreme events also have psychological impacts. Drought is known to cause depression and stress amongst farmers and pastoralists, and this impact may increase over southern Australia as a result of climate change.
+
+Next Page
+
+2020 Australian Academy of Science

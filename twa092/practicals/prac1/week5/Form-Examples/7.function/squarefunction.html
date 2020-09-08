@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>function stuff</title>
+  <script>
+    function square(num) {
+      var sq = num * num;
+      return sq;
+    }
+  </script>
+</head>
+
+<body>
+  <script>
+    var n;
+	// the 2nd argument of prompt gives the default value, which is set to null here
+    n = prompt("Enter a number:", "");
+    document.write("The square of " + n + " is " + square(eval(n)) + "<br>");
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css">
+  <title>Week 10 Exercise 3 form</title>
+</head>
+
+<body>
+  <h1>Hobby Selection Page</h1>
+  <form method="post" action="exercise3.php" id="hobbies" >
+    <p>
+   	  <label for="person">Your Name: </label>
+	    <input type="text" id="person" name="personName">
+    </p>
+    <p>
+      <label for="hobby">Favourite hobby : </label>
+      <select id="hobby" name="hobby">
+        <option value="0" disabled selected>please choose an option</option>
+        <option value="stamps">Stamp Collecting</option>
+        <option value="movies">Movies</option>
+        <option value="golf">Golf</option>
+        <option value="walking">Bush Walking</option>
+        <option value="music">Music</option>
+        <option value="other">My hobby is not listed here</option>
+      </select>
+    </p>
+    <p>
+      <input type="submit" value="Submit Form">
+    </p>
+  </form>
+</body>
+</html>

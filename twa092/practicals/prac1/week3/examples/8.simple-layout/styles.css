@@ -1,0 +1,55 @@
+body {
+    margin:0px;
+    padding:0px;
+
+}
+
+.container {
+    text-align:center;
+    width:90%;
+    height:auto;
+    margin-right:auto;
+    margin-left:auto;
+}
+
+.row {
+    width:100%;
+    height:auto;
+    margin-bottom:10px;
+    margin-top:5px;
+}
+
+.cell {
+    display:inline-block;
+    background-color:silver;
+    height:auto;
+}
+
+.full {
+    width:100%;
+}
+
+.third {
+    width:30%;
+}
+
+/*
+ * A CSS fix to rectify the behaviour of floats
+ */
+.float-fix {
+    clear:both;
+}
+
+/**
+ * Media queries to handle the change in screen size
+ */
+
+@media screen and (max-width:768px) {
+    .cell {
+        display:block;
+    }
+
+    .third {
+        width:100%;
+    }
+}

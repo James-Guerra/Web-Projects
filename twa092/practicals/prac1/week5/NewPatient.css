@@ -1,0 +1,163 @@
+/*
+Student ID: 19045229
+Name: James Guerra
+Campus: Campbelltown
+Prac time: Thursday 10am
+*/
+* {
+    padding:0;
+    margin:0;
+    font-family:Arial, sans-serif;
+}
+h3 {
+  text-align: left;
+}
+
+fieldset {
+  margin: 10px;
+  padding: 10px
+}
+body {
+  margin: 50px 20%;
+  border: 1px solid black;
+  text-align: left;
+  border-radius: 10px;
+}
+
+form {
+    padding:20px;
+}
+
+form div {
+    margin-top:10px;
+}
+
+label {
+    display:inline-block;
+    text-align: left;
+}
+
+input {
+    border-radius:5px;
+}
+
+input[type="submit"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+input[type="text"], input[type="number"], input[type="submit"], select, input[type="date"] {
+    height:25px;
+    font-size:1em;
+    padding:4px;
+    width:95%;
+    border:1px solid #ccc;
+}
+
+ input[type="submit"] {
+    padding:10px;
+    height:inherit;
+    background-color:#7db54a;
+    width:100%;
+ }
+
+select {
+    height:33px;
+}
+
+@media screen and (min-width:420px) {
+    input[type="text"], input[type="number"], input[type="submit"], select, input[type="date"]{
+        width:200px;
+    }
+    label {
+        width:150px;
+    }
+    .radioAndCheckBoxLabel {
+        width:inherit;
+    }
+
+}
+
+#other {
+  display: none;
+  margin-left: 30px;
+}
+
+
+.form-required {
+  color: red;
+  display: inline-block;
+  font-size: 120%;
+  padding-left: 10px;
+}
+
+#form-required-intro {
+  padding-top: 20px;
+  padding-left: 20px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.alert {
+  padding: 8px;
+  color: white;
+  display: none;
+  background-color: red;
+  border-radius: 5px;
+  margin: 4px;
+  width: 75%;
+}
+
+#alert-contact-details {
+  padding: 6px 6px 6px 10px;
+  margin-top: 8px;
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  display: none;
+}
+
+#address{
+  width: 75%;
+}
+
+.text-input-layout {
+  display: inline-block;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+#duplicate {
+  text-align: left;
+}
+
+#required-onsubmit {
+  padding: 6px 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  width: 30em;
+  text-align: center;
+  display: none;
+}
+
+.error {
+  background-color: white;
+}
+
+.required {
+  padding: 8px;
+  color: white;
+  display: none;
+  background-color: red;
+  border-radius: 5px;
+  margin: 4px;
+}
+
+.newline {
+  display: block;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Simple Form Layout</title>
+    <style>
+
+      label {
+         width:150px;
+         display:inline-block;
+      }
+
+      input[type="text"] {
+         padding: 5px;
+         width: 170px;
+         border:1px solid black;
+      }
+
+      .form-section {
+         display: inline-block;
+         margin-left:5px;
+         width:49%;
+      }
+
+      h2 {
+         font-size:16px;
+         font-family:Arial;
+         width: 100%;
+         background: #cccccc;
+         padding:10px 0px 10px 5px;
+      }
+
+      .input-container {
+         padding: 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form action="http://tl28serv.westernsydney.edu.au/twainfo/form.asp" method="get">
+      <section class="form-section">
+        <h2>Section for Form</h2>
+        <div class="input-container">
+          <label for="simpleInput">Field One</label>
+          <input type="text" id="simpleInput">
+        </div>
+
+        <div class="input-container">
+          <label for="simpleInput2">Field Two</label>
+          <input type="text" id="simpleInput2">
+        </div>
+      </section>
+
+      <section class="form-section">
+        <h2>Another Section for Form</h2>
+        <div class="input-container">
+          <label for="simpleInput3">Field Three</label>
+          <input type="text" id="simpleInput3">
+        </div>
+
+        <div class="input-container">
+          <label for="simpleInput4">Field Four</label>
+          <input type="text" id="simpleInput4">
+        </div>
+      </section>
+      
+      <section style="text-align:right;">
+        <div class="input-container">
+          <input type="submit" value="Submit Form"/>
+        </div>
+      </section>
+
+    </form>
+  </body>
+</html>

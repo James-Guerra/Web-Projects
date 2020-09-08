@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>Triple Equal</title>
+    <script>
+      //var number = 5;
+      var number = "5";
+
+	  function checkNumber (obj){
+	    if (obj.value == number)
+	      alert(obj.name + " is equal to variable number");
+	    if (obj.value === number)
+	      alert(obj.name + " is equal to variable number in value and type");
+	    else
+	      alert(obj.name + " is not equal in type");
+	    }
+    </script>
+</head>
+
+<body>
+  <form>
+  	<p>Type the number 5 into the text box then click somewhere else on the page.</p>
+    <input type="text" name="testInput" placeholder="Enter the number 5" onblur="checkNumber(this);">
+  </form>
+  <p>Try commenting out line 7 instead of line 8. Observe the difference in function output.<br>What does the difference in output tell you about data entered into text boxes?</p>
+</body>
+</html>
