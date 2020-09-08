@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Prac Site</title>
+    <link rel="stylesheet" type="text/css" href="clock.css">
+    <!-- <script src="prac.js"></script> -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="customise-bar-container">
+      <div class="customise-bar">
+        <div class="item-1">
+          <h2>Choice:</h2>
+          <form>
+            <input type="radio" checked id="clock-1" onclick="displayClock(this)" name="clock">
+            <label for="clock-1">CLock 1</label>
+            <br><br>
+            <input type="radio" id="clock-2" onclick="displayClock(this)" name="clock">
+            <label for="clock-2">CLock 2</label>
+          </form>
+        </div>
+        <div>
+          <h2>Choose a color:</h2>
+          <form>
+            <input type="color" class="color-picker">
+          </form>
+        </div>
+        <div>
+          <h2>Time Preference:</h2>
+          <form>
+            <input type="radio" id="12-hour" name="hour-option">
+            <label for="12-hour">12-Hour</label>
+            <br><br>
+            <input type="radio" id="24-hour" checked name="hour-option">
+            <label for="24-hour">24-Hour</label>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="clock-1">
+      <div class="flicker hours">
+        <span></span>
+        <div class="flicked"></div>
+      </div>
+      <div class="flicker hours">
+        <span></span>
+        <div class="flicked"></div>
+      </div>
+      <div class="colon">:</div>
+      <div class="flicker minutes">
+        <span></span>
+        <div class="flicked"></div>
+      </div>
+      <div class="flicker minutes">
+        <span></span>
+        <div class="flicked"></div>
+      </div>
+      <div class="colon">:</div>
+      <div class="flicker seconds">
+        <span></span>
+        <div class="flicked"></div>
+      </div>
+      <div class="flicker seconds">
+        <span></span>
+        <div class="flicked"></div>
+      </div>
+    </div>
+
+    <div class="clock-2">
+      <div class="cube">
+        <div class="side front"></div>
+        <div class="side top"></div>
+        <div class="side back"></div>
+        <div class="side bottom"></div>
+        <div class="side right"></div>
+        <div class="side left"></div>
+      </div>
+      <div class="cube">
+        <div class="side front"></div>
+        <div class="side top"></div>
+        <div class="side back"></div>
+        <div class="side bottom"></div>
+        <div class="side right"></div>
+        <div class="side left"></div>
+      </div>
+      <div class="colon">:</div>
+      <div class="cube">
+        <div class="side front"></div>
+        <div class="side top"></div>
+        <div class="side back"></div>
+        <div class="side bottom"></div>
+        <div class="side right"></div>
+        <div class="side left"></div>
+      </div>
+      <div class="cube">
+        <div class="side front"></div>
+        <div class="side top"></div>
+        <div class="side back"></div>
+        <div class="side bottom"></div>
+        <div class="side right"></div>
+        <div class="side left"></div>
+      </div>
+      <div class="colon">:</div>
+      <div class="cube">
+        <div class="side front"></div>
+        <div class="side top"></div>
+        <div class="side back"></div>
+        <div class="side bottom"></div>
+        <div class="side right"></div>
+        <div class="side left"></div>
+      </div>
+      <div class="cube">
+        <div class="side front"></div>
+        <div class="side top"></div>
+        <div class="side back"></div>
+        <div class="side bottom"></div>
+        <div class="side right"></div>
+        <div class="side left"></div>
+      </div>
+    </div>
+
+    <script>
+
+    //variables
+    const flicker = Array.from(document.querySelectorAll(".flicked"));
+    let face = Array.from(document.querySelectorAll(".front, .back, .bottom, .top"));
+    let cube = document.querySelectorAll(".cube");
+    let degrees = [-90, -90, -90, -90, -90, -90];
+    let numbers = document.querySelectorAll("div.flicker span");
+    var clock1 = document.querySelector(".clock-1");
+    var clock2 = document.querySelector(".clock-2");
+    //main
+    let color = document.querySelector(".color-picker");
+    let cubeColor = clock2.querySelectorAll(".cube .side");
+    let flickerColor = clock1.querySelectorAll(".flicker");
+    color.oninput = function() {
+      for(var i = 0; i < cubeColor.length; i++) {
+        cubeColor[i].style.backgroundColor = color.value;
+      }
+      for(var i = 0; i < flickerColor.length; i++) {
+        flickerColor[i].style.backgroundColor = color.value;
+      }
+
+    }
+    setInterval(() => {
+      getTime();
+      if(clock1.style.display === "grid") {
+        getClock1();
+      }
+      if(clock2.style.display === "grid") {
+        getClock2();
+      }
+     }, 1000);
+
+     function displayClock(button) {
+       var clock1 = document.getElementById("clock-1");
+       var clock2 = document.getElementById("clock-2");
+       if(clock1.checked) {
+         document.querySelector(".clock-1").style.display = "grid";
+         document.querySelector(".clock-2").style.display = "none";
+       }
+       else if(clock2.checked){
+         document.querySelector(".clock-2").style.display = "grid";
+         document.querySelector(".clock-1").style.display = "none";
+       }
+     }
+
+
+    function getTime() {
+      const time = new Date();
+      let timeArray = [];
+      let hours = time.getHours().toString().split('');
+      let minutes = time.getMinutes().toString().split('');
+      let seconds = time.getSeconds().toString().split('');
+      if(document.querySelector("input[id='12-hour']").checked) {
+        if(hours[0] == "1" && hours[1] > "2") {
+          hours[0] = (hours[0] - 1).toString();
+          hours[1] = (hours[1] - 2).toString();;
+        }
+      } else {
+        if(document.querySelector("input[id='24-hour']").checked) {
+          hours = hours;
+        }
+      }
+      timeArray.push(hours, minutes, seconds);
+      timeArray = timeArray.flat();
+      hours = hours < 10 ? timeArray.splice(0, 0, "0") : hours.toString().split(',');
+      minutes = minutes < 10 ? timeArray.splice(2, 0, "0") : minutes.toString().split(',')
+      seconds = seconds < 10 ? timeArray.splice(4, 0, "0") : seconds.toString().split(',');
+      return timeArray;
+    }
+
+    function getClock1() {
+      for(var i = 0; i < numbers.length; i++) {
+        numbers[i].textContent = getTime()[i];
+      }
+      flicker[5].classList.remove("animate-flick");
+      void flicker[5].offsetWidth;
+      flicker[5].classList.add("animate-flick");
+
+      if(getTime()[5] == "0") {
+        flicker[4].classList.remove("animate-flick");
+        void flicker[4].offsetWidth;
+        flicker[4].classList.add("animate-flick");
+      }
+      if(getTime()[4] == "0" && getTime()[5] == "0") {
+        flicker[3].classList.remove("animate-flick");
+        void flicker[3].offsetWidth;
+        flicker[3].classList.add("animate-flick");
+      }
+      if(getTime()[3] == "0" && getTime()[4] == "0" && getTime()[5] == "0") {
+        flicker[2].classList.remove("animate-flick");
+        void flicker[2].offsetWidth;
+        flicker[2].classList.add("animate-flick");
+      }
+      if(getTime()[2] == "0" && getTime()[3] == "0" && getTime()[4] == "0" && getTime()[5] == "0") {
+        flicker[1].classList.remove("animate-flick");
+        void flicker[1].offsetWidth;
+        flicker[1].classList.add("animate-flick");
+      }
+      if(getTime()[1] == "0" && getTime()[2] == "0" && getTime()[3] == "0" && getTime()[4] == "0" && getTime()[5] == "0") {
+        flicker[0].classList.remove("animate-flick");
+        void flicker[0].offsetWidth;
+        flicker[0].classList.add("animate-flick");
+      }
+    }
+
+    function getClock2() {
+      for(var j = 0, i = 0; j < 24; j+=4, i++) {
+        face[j].textContent = getTime()[i];
+        face[j+1].textContent = getTime()[i];
+        face[j+2].textContent = getTime()[i];
+        face[j+3].textContent = getTime()[i];
+      }
+
+       cube[5].style.transform = `rotateX(${degrees[5]}deg)`;
+       degrees[5] -= 90;
+       if(getTime()[5] == "9") {
+         degrees[5] = -90;
+       }
+       if(getTime()[5] == "0") {
+         cube[4].style.transform = `rotateX(${degrees[4]}deg)`;
+         degrees[4] -= 90;
+         if(getTime()[4] == "5") {
+           degrees[4] = -90;
+         }
+       }
+       if(getTime()[4] == "0" && getTime()[5] == "0") {
+         cube[3].style.transform = `rotateX(${degrees[3]}deg)`;
+         degrees[3] -= 90;
+         if(getTime()[3] == "5") {
+           degrees[3] = -90;
+         }
+       }
+       if(getTime()[3] == "0" && getTime()[4] == "0" && getTime()[5] == "0") {
+         cube[2].style.transform = `rotateX(${degrees[2]}deg)`;
+         degrees[2] -= 90;
+         if(getTime()[2] == "5") {
+           degrees[2] = -90;
+         }
+       }
+       if(getTime()[2] == "0" && getTime()[3] == "0" && getTime()[4] == "0" && getTime()[5] == "0") {
+         cube[1].style.transform = `rotateX(${degrees[1]}deg)`;
+         degrees[1] -= 90;
+         if(getTime()[1] == "9") {
+           degrees[1] = -90;
+         }
+       }
+       if(getTime()[1] == "0" && getTime()[2] == "0" && getTime()[3] == "0" && getTime()[4] == "0" && getTime()[5] == "0") {
+         cube[0].style.transform = `rotateX(${degrees[1]}deg)`;
+         degrees[0] -= 90;
+         if(getTime()[0] == "2") {
+           degrees[0] = -90;
+         }
+       }
+     }
+
+    </script>
+  </body>
+</html>
