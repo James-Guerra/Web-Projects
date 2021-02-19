@@ -1,0 +1,488 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Abel', sans-serif;
+}
+
+h2 {
+  text-transform: uppercase;
+}
+header nav {
+  list-style: none;
+  display: flex;
+  margin-right: -15px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-weight:bold;
+  color: #fff;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-basis: auto;
+  position: relative;
+}
+
+nav .logo {
+  border: 2px solid black;
+  margin: 10px;
+  padding: 20px;
+}
+
+nav .title {
+  font-size: 40px;
+  text-shadow: 4px 4px 14px black;
+}
+
+nav li {
+  margin: 0 15px;
+}
+
+.large-title {
+  font-size: 100px;
+  color: white;
+  font-weight: bold;
+  opacity: 0;
+  transform: translate(0px 20px);
+  animation: fadeslide 1s 0.5s forwards;
+}
+
+@keyframes fadeslide {
+  100% {
+    opacity: 1;
+    transform: translate(0px, -20px);
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: #fff;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px 100px 0;
+  z-index: 1;
+  opacity: 0;
+  animation: fadein 1s 0.5s forwards;
+}
+
+@keyframes fadein {
+  100% {
+    opacity: 1;
+  }
+}
+
+.main-background {
+  background-image: url(./images/wood-background.jpg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  z-index: -1;
+  opacity: 0.8;
+}
+
+.main-background-container {
+  position: relative;
+  text-align: center;
+  text-shadow: 3px 3px 20px black;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-container img {
+  height: 50px;
+  margin-right: 10px;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 30px;
+}
+
+.mission::before {
+  content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.8;
+    background-image: url(./images/wood-background.jpg);
+    background-size: cover;
+}
+
+.mission {
+  position: relative;
+}
+
+.founders-section {
+  background-color: #635b5b1f;
+}
+
+.owners {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 20px 100px;
+}
+
+.owner {
+  flex-basis: 300px;
+  height: 400px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px #ccc;
+  position: relative;
+}
+
+hr {
+  margin: 30px 0px;
+  width: 300px;
+  height: 1px;
+  border: none;
+  background-color: black;
+}
+
+.owner-details {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #9D9D9D;
+  opacity: 0.7;
+  padding: 15px;
+  color: black;
+}
+
+/* section:not(.main-background-container):nth-child(odd) {
+  background: whitesmoke ;
+} */
+
+.mission-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0px 160px;
+}
+
+.mission-item {
+  min-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  align-items: center;
+  padding: 30px;
+  margin: 30px 0px;
+}
+
+.mission-content img {
+  width: 300px;
+}
+
+.mission-content p:nth-child(even) {
+  margin-right: 60px;
+  margin-left: 100px;
+  text-align: justify;
+  /* float: right; */
+
+}
+
+.mission-content p:nth-child(odd) {
+  /* margin-left: 60px; */
+  text-align: justify;
+  margin-right: 100px;
+
+}
+
+footer {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.reviews-container {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+}
+
+
+.review {
+  width: 300px;
+  height: 300px;
+  box-shadow: 0px 0px 10px #ccc;
+  margin: 20px 40px 40px 40px;
+  border-radius: 5px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: #E0BF9F; */
+  background: linear-gradient(#E0BF9F, #bba693) ;
+
+}
+
+.review hr {
+  width: 80%;
+  margin: 10px 0px;
+  padding: 0;
+}
+
+.review h3 {
+  text-align: center;
+}
+
+.rating {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.rating > div {
+  margin: 10px;
+}
+
+.bottom-nav {
+  display: flex;
+  width: 100%;
+  background-image: url(./images/wood-background.jpg);
+  height: 80px;
+  background-size: cover;
+  opacity: 0.7;
+  align-items: center;
+  padding: 0px 20px;
+  justify-content: space-between;
+}
+
+.bottom-nav h2 {
+  color: white;
+  text-shadow: 0px 0px 14px black;
+}
+
+.bottom-nav div {
+  width: auto;
+}
+
+.bottom-nav .social-media-icons > img {
+  margin: 0px 10px;
+  transition: all 0.1s;
+}
+
+.bottom-nav .social-media-icons > img:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.form-review {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 0px;
+  align-items: center;
+}
+
+.form-review textarea {
+  min-height: 300px;
+}
+.form-review textarea, .form-review input {
+  min-width: 50vw;
+  border-radius: 2px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-top: 15px;
+  font-size: 15px;
+}
+
+.form-review textarea:focus, 
+.form-review input:focus {
+  outline:none;
+  box-shadow: 0px 0px 5px #ccc;
+}
+
+.form-review button {
+  outline: none;
+  border: none;
+  width: 35%;
+  height: 50px;
+  background: linear-gradient(rgba(224, 191, 159, 0.4), rgba(187, 166, 147, 0.8));
+  box-shadow: 0px 0px 10px #ccc;
+  cursor: pointer;
+  border-radius: 3px;
+  margin-top: 15px;
+  transition: all 0.2s;
+}
+
+.form-review button:active {
+  box-shadow: 0px 0px 3px #ccc;
+}
+
+.form-review button:hover {
+  opacity: 0.9;
+}
+
+.gallery-container::before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.8;
+    background-image: url(./images/wood-background.jpg);
+    background-size: cover;
+}
+
+.gallery-container {
+  min-height: 100vh;
+  padding-top: 120px;
+  position: relative;
+}
+
+.gallery {
+  width: 85%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minMax(300px, 1fr));
+  grid-gap: 10px 20px;
+}
+
+.gallery img{
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 0px 10px black;
+}
+
+.gallery-container h1 {
+  font-size: 50px;
+  color: #fff;
+  text-shadow: 0px 0px 10px black;
+
+}
+
+.gallery-header {
+  display: flex;
+  width: 85%;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 0px 30px;
+  align-items: center;
+}
+
+.gallery-header button {
+  margin: 0px 13px;
+  padding: 8px 14px;
+  border: 1px solid  rgba(100, 100, 100, 0.685);
+  box-shadow: 0px 0px 4px rgba(100, 100, 100, 0.685);
+  border-radius: 3px;
+  background: whitesmoke;
+}
+
+.gallery-header button:focus {
+  outline: none;
+}
+
+.gallery-header button:active {
+  box-shadow: none;
+}
+
+.shop-header::before {
+  content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.8;
+    background-image: url(./images/wood-background.jpg);
+    background-size: cover;
+}
+
+.shop-header {
+  width: 100%;
+  display: flex;
+  height: 70px;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 30px;
+  /* background-color: ; */
+}
+
+.shop-header {
+  list-style: none;
+}
+
+.shop-sub-header-icons a:visited {
+  color: black;
+}
+.shop-sub-header-icons {
+  float: right;
+}
+
+.shop-sub-header {
+  width: 100%;
+  height: 50vh;
+  background-color: pink;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+.shop-sub-header li {
+  margin: 10px;
+  list-style: none;
+  display: inline-block
+}
+
+.shop-sub-header form {
+  flex-basis: 50%;
+  height: 40px;
+}
+
+.shop-sub-header input {
+  border-radius: 20px;
+  box-shadow: 0px 0px 2px black;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding: 0px 10px;
+  height: 100%;
+  font-size: 18px;
+  background-color: rgba(225, 225, 225, 0.8);
+}
