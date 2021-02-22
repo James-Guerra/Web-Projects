@@ -454,13 +454,14 @@ footer {
 }
 
 .shop-sub-header {
-  width: 100%;
-  height: 50vh;
+  /* width: 100%; */
+  /* height: 50vh; */
   background-color: pink;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   padding: 30px;
+  flex-grow: 1;
 }
 
 .shop-sub-header li {
@@ -485,4 +486,13 @@ footer {
   height: 100%;
   font-size: 18px;
   background-color: rgba(225, 225, 225, 0.8);
+}
+
+.shop-main-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.shop-side-bar {
+  flex-basis: 22%;
 }
