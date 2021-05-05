@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela&display=swap');
+* {
+  font-family: 'Varela', sans-serif;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  scroll-behavior: smooth;
+
+}
+
+body {
+  background-image: url("Large-Triangles.svg");
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+body section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+section a {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+section a:link, section a:hover, section a:visited {
+  color: black;
+  text-decoration: none;
+  cursor: default;
+}
+
+.amount-input input {
+  width: 100%;
+  height: 40px;
+  border-radius: 8px;
+  border: none;
+  padding: 0px 7px;
+  background-color: rgba(252, 252, 252, 0.877);
+  font-size: 0.8em;
+  color: rgba(95, 95, 95, 1);
+  display: block;
+  margin: 30px 0px;
+  transition: box-shadow 0.5s;
+}
+
+section div {
+  width: 40%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.amount-input input:focus, .amount-input input:hover {
+  outline: none;
+  /* border: 2px solid rgba(170, 170, 170, 0.5); */
+  box-shadow: 0px 0px 10px rgba(79, 122, 133, 0.651);
+}
+
+section a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  border: none;
+  border-radius: 5px;
+  width: 100px;
+  text-align: center;
+  height: 40px;
+  background-color: rgba(252, 252, 252, 0.877);
+  transition: background-color 0.3s;
+}
+
+section a:hover {
+  background-color: rgba(231, 231, 231, 0.877);
+}
+
+label {
+  color: rgba(95, 95, 95, 1);
+
+}
+
+#workout-info-container {
+  /* width: 00px; */
+  height: 200px;
+  position: fixed;
+  background-color: rgba(253, 253, 253, 0.85);
+  top: 0;
+  left: 0;
+  margin-top: 30px;
+  margin-left: 30px;
+  border-radius: 10px;
+  border-collapse: separate;
+  border-spacing: 10px;
+}
+
+#workout-info-container td, #workout-info-container tr, #workout-info-container th {
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  /* background-color: blue; */
+}
+
+svg #dial {
+  transform: rotate(0deg);
+  transform-origin: 232.2px 167.3px;
+  stroke: rgb(225, 225, 225);
+  stroke-linecap: round;
+  fill: rgb(235, 235, 235); 
+  
+}
+
+svg #dial:hover {
+  /* stroke: rgba(0, 0, 0, 0.637); */
+}
+
+#dial-container {
+  box-shadow: 0px 0px 10px rgba(155, 155, 155, 0.747);
+}
+
+#time-display {
+  /* background-color: rgba(199, 199, 199, 0.486); */
+  margin: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#time-display {
+  font-size: 3em;
+}
+
+#time-display input {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  border-bottom: 1px solid black;
+  margin: 7px;
+  height: 80px;
+  width: 70px;
+  font-size: 1.2em;
+  text-align: center;
+  color: #0a3058;
+}
+
+#time-display input:focus {
+  outline: none;
+  border-bottom: 2px solid black;
+  /* background-color: rgba(0, 0, 0, 0); */
+}
+
+#time-display span {
+  margin: 7px;
+}

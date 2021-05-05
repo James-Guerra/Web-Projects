@@ -1,0 +1,93 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Timer</title>
+  <meta name="HIIT Timer" content="HIIT TImer">
+  <link rel="stylesheet" href="./main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+     <table id="workout-info-container">
+       <tr>
+          <th></th>
+          <th>Amount</th>
+          <th>Duration</th>
+       </tr>
+       <tr>
+         <td>Sets</td>
+         <td></td>
+         <td></td>
+       </tr>
+       <tr>
+         <td>Intervals</td>
+         <td></td>
+         <td></td>
+       </tr>
+     </table>
+  <section id="section-1" class="amount-input">
+    <div>
+      <h1><label for="num-of-sets">Enter Number Of Sets</label></h1>
+      <input id="num-of-sets" type="number" min=0 max=100></input>
+      <a href="#section-2">OK</a>
+    </div>
+  </section>
+  <section id="section-2" class="amount-input">
+    <div>
+      <h1><label for="num-of-intervals">Enter Number Of Intervals</label></h1>
+      <input id="num-of-intervals" type="number" min=0 max=1000></input>
+      <a href="#section-3">OK</a>
+    </div>
+  </section>
+  <section id="section-3">
+    <div>
+      <!-- <?xml version="1.0" encoding="utf-8"?>
+      <svg viewBox="147.483 82.632 169.342 169.342" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+        <g>
+          <circle id="circle-dial" style="fill: rgb(216, 216, 216);" cx="232.154" cy="167.303" r="84"/>
+          <line id="dial" x1="232.2" y1="167.3" x2="232.669" y2="82.701" bx:origin="-0.532691 0.802328"/>
+        </g>
+      </svg> -->
+
+      <?xml version="1.0" encoding="utf-8"?>
+      <svg viewBox="147.483 82.632 169.342 169.342" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+        <defs>
+          <radialGradient gradientUnits="userSpaceOnUse" cx="232.154" cy="167.303" r="84.671" id="gradient-0" gradientTransform="matrix(-1.024685, 0.677343, -0.66132, -1.000444, 580.679184, 177.432352)">
+            <stop offset="0" style="stop-color: rgba(10, 48, 88, 1)"/>
+            <stop offset="1" style="stop-color: rgb(71, 73, 98);"/>
+          </radialGradient>
+          <filter id="inner-shadow-filter-0" x="-500%" y="-500%" width="1000%" height="1000%" bx:preset="inner-shadow 1 0 0 10 0.5 rgba(0,0,0,0.7)">
+            <feOffset dx="0" dy="0"/>
+            <feGaussianBlur stdDeviation="10"/>
+            <feComposite operator="out" in="SourceGraphic"/>
+            <feComponentTransfer result="choke">
+              <feFuncA type="linear" slope="1"/>
+            </feComponentTransfer>
+            <feFlood flood-color="rgba(0,0,0,0.7)" result="color"/>
+            <feComposite operator="in" in="color" in2="choke" result="shadow"/>
+            <feComposite operator="over" in="shadow" in2="SourceGraphic"/>
+          </filter>
+        </defs>
+        <circle id="circle-dial" style="filter: url(#inner-shadow-filter-0); paint-order: fill; fill: url(#gradient-0);" cx="232.154" cy="167.303" r="84.671"/>
+        <line id="dial" x1="232.2" y1="167.3" x2="232.566" y2="101.301" bx:origin="-0.532691 0.802328"/>
+        <text transform="matrix(0.366636, 0, 0, 0.334205, 168.839129, 40.086281)" style="fill: rgb(239, 239, 239); font-family: Roboto Slab; font-size: 28px; white-space: pre;" bx:origin="0.478891 0.5"><tspan x="157.677" y="159.779">60</tspan><tspan x="157.677" dy="1em">​</tspan></text>
+        <text transform="matrix(0.366636, 0, 0, 0.334205, 185.031039, 193.820697)" style="fill: rgb(239, 239, 239); font-family: Roboto Slab;; font-size: 28px; white-space: pre;"><tspan x="109.722" y="159.107">30</tspan><tspan x="109.722" dy="1em">​</tspan></text>
+        <text transform="matrix(0.366636, 0, 0, 0.334205, 257.964115, 103.461656)" style="fill: rgb(239, 239, 239); font-family: Roboto Slab; font-size: 28px; white-space: pre;" bx:origin="0.5 0.540913"><tspan x="123.391" y="190.479">15</tspan><tspan x="123.391" dy="1em">​</tspan></text>
+        <text transform="matrix(0.366636, 0, 0, 0.334205, 95.297395, 110.486078)" style="fill: rgb(239, 239, 239); font-family: Roboto Slab; font-size: 28px; white-space: pre;" x="150.954" y="172.104">45</text>
+      </svg>
+      <div id="time-display">
+        <input value="0"></input>
+        <input value="0"></input>
+        <span>:</span>
+        <input value="0"></input>
+        <input value="0"></input>
+      </div>
+    </div>
+    
+  </section>
+</body>
+<script src="./main.js"></script>
+</html>

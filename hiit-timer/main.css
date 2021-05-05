@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela&display=swap');
+* {
+  font-family: 'Varela', sans-serif;
+}
+.interval-info {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+html, body {
+  scroll-behavior: smooth;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.info-section {
+  min-width: 100%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0px 100px 30px 100px;
+}
+
+.info-section h1 {
+  font-size: 2.3em;
+}
+
+.interval-selection-container {
+  width: 85%;
+  height: 80px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 30px 0px;
+}
+
+.interval-selection {
+  flex-grow: 1;
+  /* flex-basis: 100px; */
+  background-color: teal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.3em;
+  color: white;
+}
+
+.interval-selection:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.interval-selection:last-child {
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+hr {
+  height: 80%;
+  outline: 1px solid #ccc;
+  border: none;
+  align-self: center;
+}
+* {
+  box-sizing: border-box;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+
+.interval-selection:hover {
+  background-color: #0080809e
+}
+
+.interval-selection:active {
+  margin: 2px 0px;
+}
+
+.interval-selection input[type="radio"] {
+  display: none;
+}
+
+.interval-selection label {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-section-controller {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 10%;
+  flex-grow: 1;
+}
+
+.info-section-controller button {
+  background: linear-gradient(#32ADAF 50%, #137A7D);
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  border: 2px invert #025659;
+  outline: none;
+}
+
+.interval-gt-10-popover {
+  width: 500px;
+  /* height: 300px; */
+  background-color: black;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  bottom: 50%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgb(156, 156, 156);
+  background-color: rgb(238, 238, 238);
+  border: 1px solid rgba(129, 129, 129, 0.8);
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: slide-in 0.6s;
+}
+
+.customised-input {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 30px;
+  background-color: #ccc;
+  border: 1px solid rgb(156, 156, 156);
+  font-size: 130%;
+  text-align: center;
+}
+
+.interval-gt-10-popover h1 {
+  margin: 15px;
+}
+
+.customised-input:focus {
+  outline: 1px solid rgb(122, 122, 122);
+}
+
+.close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 5px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.close-button:active {
+  transform: scale(0.95);
+}
+
+@keyframes slide-in {
+  from {bottom: -300px;}
+  to {bottom: 50%;}
+}

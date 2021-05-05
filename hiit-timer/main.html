@@ -1,0 +1,114 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Timer</title>
+  <meta name="HIIT Timer" content="HIIT TImer">
+  <link rel="stylesheet" href="./main.css">
+
+</head>
+
+<body>
+  <div class="interval-info">
+    <section class="info-section" id="section-1">
+      <h1>Select Number Of Sets</h1>
+      <form class="interval-selection-container">
+        
+        <div class="interval-selection">
+            <label for="interval-0">0</label>
+            <input type="radio" id="interval-0" name="interval-sel" value="0">
+        </div>
+        <hr/>
+        <div class="interval-selection">
+            <label for="interval-1">1</label>
+            <input type="radio" id="interval-1" name="interval-sel" value="1">
+        </div>
+        <hr/>
+        <div class="interval-selection">
+            <label for="interval-2">2</label>
+            <input type="radio" id="interval-2" name="interval-sel" value="2">
+        </div>
+        <hr/>
+        <div class="interval-selection">
+            <label for="interval-3">3</label>
+            <input type="radio" id="interval-3" name="interval-sel" value="3">
+        </div>
+        <hr/>
+        <div class="interval-selection">
+            <label for="interval-4">4</label>
+            <input type="radio" id="interval-4" name="interval-sel" value="4">
+        </div>
+        <hr/>
+        <div class="interval-selection">
+            <label for="interval-5">5</label>
+            <input type="radio" id="interval-5"  name="interval-sel" value="5">
+        </div>
+        <hr/>
+        <div class="interval-selection">
+            <label for="interval-6">6</label>
+            <input type="radio" id="interval-6" name="interval-sel" value="6">
+        </div>
+        <hr/>
+        <div class="interval-selection">
+            <label for="interval-7">7</label>
+            <input type="radio" id="interval-7" name="interval-sel" value="7">
+        </div>
+        <hr/>
+        <div class="interval-selection">
+            <label for="interval-8">8</label>
+            <input type="radio" id="interval-8" name="interval-sel" value="8">
+        </div>
+        <hr/>
+        <div class="interval-selection">
+            <label for="interval-9">9</label>
+            <input type="radio" id="interval-9" name="interval-sel" value="9">
+        </div>
+        <hr/>
+        <div class="interval-selection" id="activate-popover">
+            <label for="interval-10">10+</label>
+            <input type="radio" id="interval-10" name="interval-sel" value="10">
+        </div>
+        
+      </form>
+      <div class="info-section-controller">
+        <a href="#section-1"><button style="justify-self: flex-end;">Previous</button></a>
+        <a href="#section-2"><button style="justify-self: flex-end;">Next</button></a>
+      </div>
+      <div class="interval-gt-10-popover">
+        <div class="close-button"><img src="./close-button.png"/></div>
+        <h2>Enter Number of Sets</h1>
+        <input class="customised-input" autofocus></input>
+      </div>
+    </section>
+    <section class="info-section" id="section-2" style="justify-content: center;">
+      <h1>High Intensity Intervals</h1>
+      <h2>Enter Duration (in seconds)</h2>
+      <input class="customised-input" autofocus />
+      <div class="info-section-controller">
+        <a href="#section-1"><button style="justify-self: flex-end;">Previous</button></a>
+        <a href="#section-3"><button style="justify-self: flex-end;">Next</button></a>
+      </div>
+    </section>
+    <section class="info-section" id="section-3" style="justify-content: center;">
+      <h1>Rest/Low Intensity Intervals</h1>
+      <h2>Enter Duration (in seconds)</h2>
+      <input class="customised-input" autofocus />
+      <div class="info-section-controller">
+        <a href="#section-2"><button style="justify-self: flex-end;">Previous</button></a>
+        <a href="#section-4"><button style="justify-self: flex-end;">Next</button></a>
+      </div>
+    </section>
+    <section class="info-section" id="section-4">
+      <h1>Set Rest (optional)</h1>
+      <h2>Enter Duration (in seconds)</h2>
+      <input class="customised-input" autofocus />
+      <div class="info-section-controller">
+        <a href="#section-3"><button style="justify-self: flex-end;">Previous</button></a>
+        <a href="#section-4"><button style="justify-self: flex-end;">Next</button></a>
+      </div>
+    </section>
+  </div>
+</body>
+<script src="./main.js"></script>
+</html>
