@@ -1,3 +1,6 @@
+# App Functionality
+![Gif](functionality.gif)
+
 # Configuring App to Run
 
 First `cd` into your app directory
