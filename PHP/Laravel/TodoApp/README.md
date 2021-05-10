@@ -1,3 +1,8 @@
+# Todo App
+The purpose of this application is to showcase my first Laravel App.
+
+If you are to use this app, please follow the instructions below. 
+
 # App Functionality
 
 ![](functionality.gif)
