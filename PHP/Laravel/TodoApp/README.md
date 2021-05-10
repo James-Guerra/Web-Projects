@@ -1,5 +1,6 @@
 # App Functionality
-![Gif](functionality.mp4)
+
+![](functionality.gif)
 
 # Configuring App to Run
 
@@ -8,7 +9,6 @@ First `cd` into your app directory
 rename `.env.example` to `.env`
 
 Go to `.env` file and change `DB_CONNECTION=mysql` to `DB_CONNECTION=sqlite`
-
 
 
 And run the following commands
