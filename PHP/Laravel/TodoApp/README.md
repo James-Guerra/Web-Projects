@@ -1,5 +1,5 @@
 # App Functionality
-![Gif](functionality.gif)
+![Gif](functionality.mp4)
 
 # Configuring App to Run
 
